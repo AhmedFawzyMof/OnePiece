@@ -78,7 +78,9 @@ const state = reactive({
 
 async function GetData() {
   try {
-    let response = await axios.get("http://localhost:5500/api/home");
+    let response = await axios.get(
+      "https://onepiece-backend.onrender.com/api/home"
+    );
     state.Carousel = response.data.Carousels;
     state.Categories = response.data.Categories;
   } catch (err) {
