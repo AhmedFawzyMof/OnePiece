@@ -51,7 +51,15 @@
 </template>
 
 <script setup lang="ts">
-import { IonContent, IonPage } from "@ionic/vue";
+import {
+  IonContent,
+  IonPage,
+  IonImg,
+  IonButton,
+  IonCard,
+  IonCardHeader,
+  IonCardContent,
+} from "@ionic/vue";
 import axios from "axios";
 import { reactive } from "vue";
 import Header from "../components/Header.vue";
