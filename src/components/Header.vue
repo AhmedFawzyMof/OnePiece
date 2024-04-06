@@ -7,6 +7,7 @@
         class="logoImg"
         alt="OnePiece Logo"
       ></ion-img>
+      <ion-title slot="end">{{ pagename }}</ion-title>
     </ion-toolbar>
   </ion-header>
 </template>
@@ -15,6 +16,7 @@ import { defineComponent } from "vue";
 import { IonHeader, IonToolbar, IonImg } from "@ionic/vue";
 export default defineComponent({
   name: "Header",
+  props: ["pagename"],
   components: {
     IonHeader,
     IonToolbar,

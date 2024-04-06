@@ -1,6 +1,6 @@
 <template>
   <ion-page>
-    <Header />
+    <Header pagename="Tailored clothing" />
 
     <ion-content :fullscreen="true">
       <div class="carousel">
@@ -87,7 +87,9 @@ const state = reactive({
 
 async function GetData() {
   try {
-    let response = await axios.get("http://localhost:5500/api/home");
+    let response = await axios.get(
+      "https://onepiece-backend.onrender.com/api/home"
+    );
     state.Carousel = response.data.Carousels;
     state.Categories = response.data.Categories;
   } catch (err) {
