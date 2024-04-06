@@ -1,5 +1,5 @@
 <template>
-  <ion-header :translucent="true">
+  <ion-header>
     <ion-toolbar color="primary">
       <ion-img
         src="./assets/logo.png"

@@ -26,13 +26,14 @@
               color="primary"
               style="display: flex; align-items: center; flex-direction: row"
             >
-              <h2 style="font-size: 17px; text-transform: capitalize">
-                {{ category.name }}
-              </h2>
               <ion-img
                 style="width: 50px; height: 50px"
                 :src="category.image"
               ></ion-img>
+
+              <h2 style="font-size: 17px; text-transform: capitalize">
+                {{ category.name }}
+              </h2>
             </ion-card-header>
             <ion-card-content
               style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px"
@@ -86,9 +87,7 @@ const state = reactive({
 
 async function GetData() {
   try {
-    let response = await axios.get(
-      "https://onepiece-backend.onrender.com/api/home"
-    );
+    let response = await axios.get("http://localhost:5500/api/home");
     state.Carousel = response.data.Carousels;
     state.Categories = response.data.Categories;
   } catch (err) {
